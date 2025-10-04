@@ -12,20 +12,48 @@
 - 🏗️ **注册中心**: 支持Zookeeper、Nacos等注册中心
 - 🎯 **代理机制**: 支持JDK动态代理和CGLIB代理
 
-## 快速开始
+## 开发状态
 
-### 1. 添加依赖
+### 📊 当前进度
+
+- ✅ **核心架构设计** - 完成
+- ✅ **基础接口定义** - 完成  
+- ✅ **网络通信层** - 完成
+- ✅ **序列化模块** - 完成
+- ✅ **注册中心** - 完成
+- ✅ **负载均衡** - 完成
+- ✅ **代理机制** - 完成
+- 🚧 **Spring集成** - 开发中
+- 🚧 **测试用例** - 开发中
+- 🚧 **性能优化** - 待开始
+- 🚧 **文档完善** - 进行中
+
+### 🚀 快速开始（开发版本）
+
+#### 1. 本地安装
+
+```bash
+# 克隆项目
+git clone https://github.com/tanzhilangnw/lightning-rpc.git
+cd lightning-rpc
+
+# 安装到本地Maven仓库
+mvn clean install
+```
+
+#### 2. 添加依赖
 
 ```xml
 <dependency>
     <groupId>com.lightning</groupId>
     <artifactId>rpc-spring</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.0-SNAPSHOT</version>
 </dependency>
 ```
 
-### 2. 服务提供者
+#### 3. 使用示例
 
+**服务提供者**：
 ```java
 @RpcService(version = "1.0.0", group = "default")
 @Service
@@ -39,8 +67,7 @@ public class UserServiceImpl implements UserService {
 }
 ```
 
-### 3. 服务消费者
-
+**服务消费者**：
 ```java
 @Service
 public class UserController {
@@ -54,8 +81,7 @@ public class UserController {
 }
 ```
 
-### 4. 配置文件
-
+**配置文件**：
 ```yaml
 lightning:
   rpc:
@@ -196,15 +222,54 @@ public class CustomLoadBalancer implements LoadBalancer {
 - 监控响应时间
 - 设置告警阈值
 
-## 许可证
+## 🚧 开发计划
+
+### 近期目标（v1.0.0）
+- [ ] 完善Spring自动配置
+- [ ] 添加单元测试和集成测试
+- [ ] 性能基准测试
+- [ ] 完善文档和示例
+
+### 中期目标（v1.1.0）
+- [ ] 支持更多序列化方式
+- [ ] 添加监控和指标
+- [ ] 支持服务治理功能
+- [ ] 性能优化
+
+### 长期目标（v2.0.0）
+- [ ] 支持多语言客户端
+- [ ] 云原生支持
+- [ ] 微服务治理
+- [ ] 企业级特性
+
+## 🤝 贡献指南
+
+欢迎参与项目开发！
+
+### 开发环境
+```bash
+# 克隆项目
+git clone https://github.com/tanzhilangnw/lightning-rpc.git
+cd lightning-rpc
+
+# 安装依赖
+mvn clean install
+
+# 运行测试
+mvn test
+```
+
+### 提交规范
+- 使用清晰的提交信息
+- 遵循代码规范
+- 添加必要的测试
+- 更新相关文档
+
+## 📄 许可证
 
 MIT License
 
-## 贡献
-
-欢迎提交Issue和Pull Request来帮助改进项目。
-
-## 联系方式
+## 📞 联系方式
 
 - 项目地址: https://github.com/tanzhilangnw/lightning-rpc
 - 问题反馈: https://github.com/tanzhilangnw/lightning-rpc/issues
