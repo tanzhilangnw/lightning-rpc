@@ -1,0 +1,39 @@
+# Lightning RPC 配置示例
+lightning:
+  rpc:
+    # 应用配置
+    application:
+      name: lightning-rpc-example
+    
+    # 服务器配置
+    server:
+      host: 127.0.0.1
+      port: 8080
+      thread-pool-size: 10
+    
+    # 客户端配置
+    client:
+      connect-timeout: 3000
+      read-timeout: 5000
+      max-connections: 100
+    
+    # 序列化配置
+    serialization:
+      type: json  # json, kryo, protobuf
+    
+    # 注册中心配置
+    registry:
+      type: zookeeper  # zookeeper, nacos
+      address: 127.0.0.1:2181
+    
+    # 负载均衡配置
+    load-balancer:
+      type: roundRobin  # roundRobin, random, weightedRoundRobin, consistentHash
+
+# 日志配置
+logging:
+  level:
+    com.lightning.rpc: DEBUG
+    root: INFO
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"

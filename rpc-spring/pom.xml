@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.lightning</groupId>
+        <artifactId>lightning-rpc</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <artifactId>rpc-spring</artifactId>
+    <packaging>jar</packaging>
+    <name>Lightning RPC Spring</name>
+    <description>RPC Spring集成模块</description>
+
+    <dependencies>
+        <!-- 核心模块 -->
+        <dependency>
+            <groupId>com.lightning</groupId>
+            <artifactId>rpc-core</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        
+        <!-- 协议模块 -->
+        <dependency>
+            <groupId>com.lightning</groupId>
+            <artifactId>rpc-protocol</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        
+        <!-- 序列化模块 -->
+        <dependency>
+            <groupId>com.lightning</groupId>
+            <artifactId>rpc-serialization</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        
+        <!-- 注册中心模块 -->
+        <dependency>
+            <groupId>com.lightning</groupId>
+            <artifactId>rpc-registry</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        
+        <!-- 负载均衡模块 -->
+        <dependency>
+            <groupId>com.lightning</groupId>
+            <artifactId>rpc-loadbalance</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        
+        <!-- Spring -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+        </dependency>
+        
+        <!-- 日志 -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+        
+        <!-- 测试 -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>
